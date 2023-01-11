@@ -5,10 +5,7 @@ public class Witcher {
 	private int health;
 	private boolean hasSoul;
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	public String getName() {
 		return name;
 	}
@@ -26,6 +23,29 @@ public class Witcher {
 	}
 	public void setHasSoul(boolean hasSoul) {
 		this.hasSoul = hasSoul;
+	}
+	
+	public boolean isDeath() {
+		if(health==0) {
+			return true;
+		}else if(!hasSoul) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Witcher brujo= new Witcher();
+		brujo.setName("Willy wonka");
+		brujo.setHealth(1);
+		brujo.setHasSoul(true);
+		if(brujo.isDeath()) {
+			System.out.println(brujo.getName()+" está muerto");
+		}else {
+			System.out.println(brujo.getName()+" está vivo");
+		}
 	}
 
 }
