@@ -12,7 +12,7 @@ public class Main {
 			System.out.println(brujo.getName()+" está muerto");
 		}else {
 			System.out.println(brujo.getName()+" está vivo");
-		}
+		}//Esto es nuevo
 	}
 
 }
